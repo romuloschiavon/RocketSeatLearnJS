@@ -19,6 +19,12 @@
         <div id="webpage">
 
         </div>
+        <br><br>
+        <div id="app3">
+            <div class="box">
+
+            </div>
+        </div>
         
         <script>
             function ShowAlert(){
@@ -45,6 +51,11 @@
             var containerElement = document.querySelector('div#webpage'); // Select where the created element is going to be placed
             containerElement.appendChild(linkElement); // Make the linkElement (article + text + class + href + title) appear 
             
+            var boxElement = document.querySelector('div.box');
+            boxElement.style.width = '100px';
+            boxElement.style.height = '100px';
+            boxElement.style.fontSize = '22px';
+            boxElement.style.backgroundColor = '#f00';
         </script>
     </body>
 </html>
