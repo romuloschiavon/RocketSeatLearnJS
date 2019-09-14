@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>
+            Learning JavaScript with Rocketseat tutorials!
+        </title>
+    </head>
+    <body>
+        <div id="app">
+            <button onmouseover="ShowAlert()">Dont press me!</button>
+            <input onkeydown="ShowAlert2()" placeholder="Don't type here">
+        </div>
+        
+        
+        <script>
+            function ShowAlert(){
+                var Alert = alert('Dont you even think');
+                setTimeout(Alert, 5000);    
+            };
+            function ShowAlert2(){
+                alert('Come on brother I told you not to type here')
+            }
+        </script>
+    </body>
+</html>
