@@ -10,7 +10,15 @@
             <button onmouseover="ShowAlert()">Dont press me!</button>
             <input onkeydown="ShowAlert2()" placeholder="Don't type here">
         </div>
-        
+        <br><br>
+        <div id="app2">
+            <input type="text" name="Name" placeholder="Name" id="name" class="name" />
+            <button class="button">Add</button>
+        </div>
+        <br><br>
+        <div id="webpage">
+
+        </div>
         
         <script>
             function ShowAlert(){
@@ -19,7 +27,24 @@
             };
             function ShowAlert2(){
                 alert('Come on brother I told you not to type here')
+            };
+
+            var inputElement = document.querySelector('input[name=Name]'); // Select the box that has the name="Name"
+            var btnElement =  document.querySelector('button.button'); // Select the button that has the class button
+            btnElement.onclick = function(){
+                var text = inputElement.value; // Get the value of the inputElement
+                alert(text); // Show an alert with the text that was on inputElement
             }
+
+            var linkElement = document.createElement('a'); // Create an Article paragraph
+            linkElement.setAttribute('href', 'http://ejec.ufsc.br'); // Give a href to the article
+            linkElement.setAttribute('class', 'ejec'); // Give a class to the article 
+            linkElement.setAttribute('title', 'EJEC\'s webpage'); // Give a title to the article 
+            var textElement = document.createTextNode('Acess EJEC webpage'); // Show a text in the article
+            linkElement.appendChild(textElement); // Make the text a part of the linkElement variable
+            var containerElement = document.querySelector('div#webpage'); // Select where the created element is going to be placed
+            containerElement.appendChild(linkElement); // Make the linkElement (article + text + class + href + title) appear 
+            
         </script>
     </body>
 </html>
