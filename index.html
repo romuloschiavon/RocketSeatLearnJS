@@ -7,7 +7,7 @@
     </head>
     <body>
         <script>
-        // Learning how to use variables, and how the assync works
+        // How to use variables, and how the assync works
         var name = "Rômulo";
             var vector = [name, 18, 73.8, 177.3, true, 'M', 'HE'];
             var user = {
@@ -21,9 +21,9 @@
 
             console.log(name);
             console.log(user);
-        //END OF VARIABLES STUDIES
+        // END OF VARIABLES STUDIES
 
-        // Learning functions
+        // Functions
             function sum(number1, number2){
                 var result = number1 + number2;
                 return result;
@@ -32,9 +32,9 @@
 
             var result = sum(1,5);
             console.log(result);
-        //END OF FUNCTION LEARNING
+        // END OF FUNCTION LEARNING
 
-        // Learning Ifs
+        // Ifs
             function Sex(sex){
                 // M or F
                 // Male or Female
@@ -52,7 +52,7 @@
             console.log(sexresult);
         // END OF IF LEARNING
 
-        // Learning Switches
+        // Switches
         function Gender(gender){
             // Heterosexual, Homosexual or Other
             // HE/HO/OT
@@ -69,14 +69,14 @@
             console.log(genderresult);
         // END OF IF LEARNING
 
-        // Learning Logic - And/Or/Not
+        // Logic - And/Or/Not
             var color = 'Purple', purple = color == 'Purple';
           
           //If you have only 2 options (true/false) you can do the hole verification in only one line as shown below
           //var color = 'Purple', purple = (color == 'Purple') ? 'Yes the cup is purple' : 'The cup is not purple, I gues you should buy another one';
 
             console.log("True or False. Is the color of the cup Purple?",purple);
-        //END OF LOGIC LEARNING
+        // END OF LOGIC LEARNING
 
         // Repetition Structures
             for (var i = 1; i <= 5; i++){
@@ -88,7 +88,16 @@
                 console.log(j);
                 j++;
             }; //Usually we use while when we dont know the extension of the variable, as if you don't know how many times the actual the code will run
+        // END OF REPETITION STRUCTURES LEARNING
 
+        // Intervals and Timeout
+            function ShowSomething(){
+                console.log("Hello, World!");
+            }
+            
+          //setTimeout(ShowSomething, 5000); // Will wait 1000ms before running the code
+          //setInterval(ShowSomething, 1000); // Will run the code as many times as possible with intervals of 1000ms
+        // END OF INTERVALS AND TIMEOUT LEARNING
         </script>
     </body>
 </html>
