@@ -7,18 +7,68 @@
     </head>
     <body>
         <script>
-            var name = "Rômulo";
-            var vector = [name, 18, 73.8, 177.3, true];
+        // Learning how to use variables, and how the assync works
+        var name = "Rômulo";
+            var vector = [name, 18, 73.8, 177.3, true, 'M', 'HE'];
             var user = {
                 name: vector[0],
                 age: vector[1],
                 weight: vector[2],
                 height: vector[3],
-                human: vector[4]
+                human: vector[4],
+                sex: vector[5]
             };
 
             console.log(name);
             console.log(user);
+        //END OF VARIABLES STUDIES
+
+        // Learning functions
+            function sum(number1, number2){
+                var result = number1 + number2;
+                return result;
+            }
+
+
+            var result = sum(1,5);
+            console.log(result);
+        //END OF FUNCTION LEARNING
+
+        // Learning Ifs
+            function Sex(sex){
+                // M or F
+                // Male or Female
+
+                if(sex == 'M'){
+                    return "Male";
+                }else if (sex == 'F'){
+                    return 'Female';
+                }else {
+                    return 'You must choose between M/F'
+                };
+            };
+            
+            var sexresult = Sex(vector[5]);
+            console.log(sexresult);
+        // END OF IF LEARNING
+
+        // Learning Switches
+        function Gender(gender){
+            // Heterosexual, Homosexual or Other
+            // HE/HO/OT
+            switch(gender){
+                case 'HE':
+                    return 'Heterosexual';
+                case 'HO':
+                    return 'Homosexual';
+                default:
+                    return 'Other';
+            };
+        };
+            var genderresult = Gender(vector[6]);
+            console.log(genderresult);
+        // END OF IF LEARNING
+
         </script>
     </body>
 </html>
