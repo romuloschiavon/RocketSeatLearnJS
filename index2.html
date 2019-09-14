@@ -10,6 +10,11 @@
             <button onmouseover="ShowAlert()">Dont press me!</button>
             <input onkeydown="ShowAlert2()" placeholder="Don't type here">
         </div>
+        <br><br>
+        <div id="app2">
+            <input type="text" name="Name" placeholder="Name" id="name" class="name" />
+            <button class="button">Add</button>
+        </div>
         
         
         <script>
@@ -19,7 +24,15 @@
             };
             function ShowAlert2(){
                 alert('Come on brother I told you not to type here')
+            };
+
+            var inputElement = document.querySelector('input[name=Name]'); // Select the box that has the name="Name"
+            var btnElement =  document.querySelector('button.button'); // Select the button that has the class button
+            btnElement.onclick = function(){
+                var text = inputElement.value; // Get the value of the inputElement
+                alert(text); // Show an alert with the text that was on inputElement
             }
+
         </script>
     </body>
 </html>
