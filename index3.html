@@ -6,24 +6,25 @@
         </title>
     </head>
     <body>
-        <div class="container">
-            <div id="app">
-                <button type="button" class="btn btn-success">Success</button>
-                <div class="box" id="box" onmouseover="getRandomColor()"></div>
-            </div>
+        <div>
+            <button id="redbutton" onclick="createBox()">CREATE THE RED SQUARE</button>
         </div>
-       
+        <div id="boxes"></div>
        
        <script>
-        var btnElement = document.querySelector('button.btn');
-        var boxElement = document.querySelector('.box');
-
-        btnElement.onclick = function() { 
-            boxElement.style.width = '100px';
-            boxElement.style.height = '100px';
-            boxElement.style.marginTop = '50px';
-            boxElement.style.backgroundColor = '#f00';
-        }
+            function createBox()
+            {
+                var divElement = document.createElement('div');
+                divElement.setAttribute('id', 'redbox');
+                
+                function doBox()
+                {
+                    var boxElement = document.querySelector('div#redbox');
+                    boxElement.style.width = '100px';
+                    boxElement.style.height = '100px';
+                    boxElement.style.backgroundColor = '#ff0000';
+                }
+            }
 
         function getRandomColor() {
             var letters = '0123456789ABCDEF';
