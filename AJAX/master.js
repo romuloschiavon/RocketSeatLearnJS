@@ -14,11 +14,12 @@ xhr.onreadystatechange = function(){
 
 
 //Learning Promises
+/*
 var myPromise = function(){
     return new Promise(function(resolve, reject){
         var xhr = new XMLHttpRequest();
 
-        xhr.open('GET', 'https://api.123123github.com/users/romuloschiavon');
+        xhr.open('GET', 'https://api.github.com/users/romuloschiavon');
         xhr.send(null);
         
         xhr.onreadystatechange = function(){
@@ -34,6 +35,17 @@ var myPromise = function(){
 };
 
 myPromise()
+    .then(function(response){
+        console.log(response);
+    })
+    .catch(function(error){
+        console.warn(error);
+    });
+
+*/
+
+//Learning AXIOS
+axios.get('https://api.github.com/users/romuloschiavon')
     .then(function(response){
         console.log(response);
     })
