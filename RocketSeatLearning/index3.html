@@ -7,38 +7,34 @@
     </head>
     <body>
         <div>
-            <button id="redbutton" onclick="createBox()">CREATE THE RED SQUARE</button>
+            <button onclick="CreateRedSquare()">Create a Red Square!!</button>
+            <br><br>
         </div>
-        <div id="boxes"></div>
-       
-       <script>
-            function createBox()
-            {
-                var divElement = document.createElement('div');
-                divElement.setAttribute('id', 'redbox');
-                
-                function doBox()
-                {
-                    var boxElement = document.querySelector('div#redbox');
-                    boxElement.style.width = '100px';
-                    boxElement.style.height = '100px';
-                    boxElement.style.backgroundColor = '#ff0000';
-                }
-            }
+        <script>
+        function CreateRedSquare()
+        {
+            var squareElement = document.createElement('div');
+            squareElement.style.width = '100px'; // Set div width
+            squareElement.style.height = '100px'; // Set div height
+            squareElement.style.backgroundColor = '#ff0000'; // Div background Color
+            squareElement.setAttribute = ('onmouseover', 'bgColor()');
+            var brElement = document.createElement('br'); // Create a little spacement between divs
+            var containerElement = document.querySelector('body'); // Who is the container?
+            containerElement.appendChild(squareElement); // Appear the Square (div) in our container (body)
+            containerElement.appendChild(brElement); // Appear the spacement between our Squares
+        };
 
-        function getRandomColor() {
-            var letters = '0123456789ABCDEF';
-            var color = '#';
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
-        var newColor = getRandomColor(); // #E943F0
-                
-        console.log(newColor);
-
+        function getRandomColor() 
+        {  
+            var letters = "0123456789ABCDEF";  
+            var color = "#";  
+            for (var i = 0; i < 6; i++) 
+            {    
+                color += letters[Math.floor(Math.random() * 16)];  
+            }  
+                return color;
+        };
+        var newColor = getRandomColor();
         
         </script>
     </body>
